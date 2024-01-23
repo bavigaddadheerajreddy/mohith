@@ -1,28 +1,21 @@
 pipeline{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     add{}
 
     subtract{}
 
-}
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 79c9dbc ("changes made in the test file in the featurebranch1")
     subtract{}
 
     add{}
-<<<<<<< HEAD
->>>>>>> 9702c95 ("changed in the test file in featurebranch2")
+
 }
->>>>>>> 5ae90cc ("changed in the test file in featurebranch2")
-=======
 
 
     subtract{}
 
 }
->>>>>>> 79c9dbc ("changes made in the test file in the featurebranch1")
+
+}
+
