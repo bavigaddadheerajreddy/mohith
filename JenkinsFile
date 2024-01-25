@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Example: Running a Maven build
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Example: Running unit tests
+                sh 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Example: Deploying artifacts
+                sh 'scp target/myapp.war user@example.com:/path/to/deployment/directory'
+            }
+        }
+    }
+    
+    post {
+        success {
+            // Example: Sending a notification on success
+            slackSend(channel: '#builds', message: 'Build successful!')
+        }
+        failure {
+            // Example: Sending a notification on failure
+            slackSend(channel: '#builds', message: 'Build failed!')
+        }
+    }
+}
